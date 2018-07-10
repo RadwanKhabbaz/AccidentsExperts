@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AccidentsExperts</string>
+    <string name="title_activity_main3">Main3Activity</string>
+    <string name="title_activity_maps">Map</string>
+    <string-array name="map_types">
+        <item>TERRAIN</item>
+        <item>SATELLITE</item>
+        <item>HYBRID</item>
+    </string-array>
+
+</resources>

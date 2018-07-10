@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".choosingLocation">
+    <FrameLayout
+        android:id="@+id/content1_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/side_nav_bar"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar" >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/myEditText"
+                android:textSize="22dp"
+                android:text="Choosing Location"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="20dp"/>
+        </android.support.v7.widget.Toolbar>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/LVL"
+        >
+    <LinearLayout
+        android:id="@+id/lvTV"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:text="Longitude:"
+        android:textColor="#00705D"
+        android:textSize="10pt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Latitude  :"
+        android:textColor="#00705D"
+        android:textSize="10pt" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/lvLn"
+        >
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint=" Longitude"
+        android:textColorHint="#868686"
+        android:id="@+id/edLong"
+        android:inputType="numberDecimal"
+        android:textColor="#000000"
+        />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint=" Latitude"
+        android:textColorHint="#868686"
+        android:id="@+id/edLat"
+        android:inputType="numberDecimal"
+        android:textColor="#000000"
+        /></LinearLayout>
+    </LinearLayout>
+    <ProgressBar
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btExpertLocNext"
+        android:visibility="invisible"
+        android:id="@+id/proLoc"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/btExpertLocNext"
+        android:text="Next"
+        android:textSize="22dp"
+        android:textColor="#FDFDFD"
+        android:background="#41AFA4"
+        android:layout_centerInParent="true"
+        />
+
+
+</RelativeLayout>

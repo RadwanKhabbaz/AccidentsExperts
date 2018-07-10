@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Use DrawerLayout as root container for activity -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+    <FrameLayout
+        android:id="@+id/content1_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/side_nav_bar"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/myEditText"
+            android:textSize="22dp"
+            android:text="Sign up as expert"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"/>
+        </android.support.v7.widget.Toolbar>
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progSignup"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="70dp"
+            android:id="@+id/LV"
+            >
+            <LinearLayout
+                android:id="@+id/lvTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:text="First Name:"
+                    android:textColor="#00705D"
+                    android:textSize="10pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Last Name:"
+                    android:textColor="#00705D"
+                    android:textSize="10pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Middle Name:"
+                    android:textColor="#00705D"
+                    android:textSize="10pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:text="Username:"
+                    android:textColor="#00705D"
+                    android:textSize="10pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:text="Password:"
+                    android:textColor="#00705D"
+                    android:textSize="10pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:text="Phone Number:"
+                    android:textColor="#00705D"
+                    android:textSize="10pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Address: "
+                    android:textColor="#00705D"
+                    android:textSize="10pt" />
+
+            </LinearLayout>
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical"
+                 android:id="@+id/lvLn"
+                 >
+                 <EditText
+                     android:layout_width="200dp"
+                     android:layout_height="wrap_content"
+                     android:hint=" First Name"
+                     android:textColorHint="#868686"
+                     android:id="@+id/edFN"
+                     android:textColor="#000000"
+                     />
+
+                 <EditText
+                     android:layout_width="200dp"
+                     android:layout_height="wrap_content"
+                     android:hint=" Last Name"
+                     android:textColorHint="#868686"
+                     android:id="@+id/edLN"
+                     android:textColor="#000000"
+                     />
+                 <EditText
+                     android:layout_width="200dp"
+                     android:layout_height="wrap_content"
+                     android:hint=" Middle Name"
+                     android:textColorHint="#868686"
+                     android:id="@+id/edMN"
+                     android:textColor="#000000"
+                     />
+
+                 <EditText
+                     android:layout_width="200dp"
+                     android:layout_height="wrap_content"
+                     android:hint=" Username"
+                     android:textColorHint="#868686"
+                     android:id="@+id/edUN"
+                     android:textColor="#000000"
+                     />
+                 <EditText
+                     android:layout_width="200dp"
+                     android:layout_height="wrap_content"
+                     android:hint=" Password"
+                     android:textColorHint="#868686"
+                     android:id="@+id/edPass"
+                     android:textColor="#000000"
+                     />
+                 <EditText
+                     android:layout_width="200dp"
+                     android:layout_height="wrap_content"
+                     android:hint=" Phone Number"
+                     android:textColorHint="#868686"
+                     android:id="@+id/edPh"
+                     android:textColor="#000000"
+                    />
+                 <EditText
+                     android:layout_width="200dp"
+                     android:layout_height="wrap_content"
+                     android:hint=" Address"
+                     android:textColorHint="#868686"
+                     android:id="@+id/edAddress"
+                     android:textColor="#000000"
+                     />
+             </LinearLayout>
+        </LinearLayout>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:layout_below="@+id/LV"
+            android:orientation="horizontal"
+            android:id="@+id/rbExpert"
+            >
+
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:text="Member in the Traffic Expert Syndicate: "
+                android:textColor="#00705D"
+                android:textSize="18dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10pt"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:textColor="#000000"
+                android:id="@+id/rbYes"
+                android:layout_marginTop="15pt"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:checked="true"
+                android:textColor="#000000"
+                android:id="@+id/rbNo"
+                android:layout_marginTop="15pt"/>
+        </RadioGroup>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rbExpert"
+            android:orientation="horizontal"
+            android:id="@+id/rbLocationExpert"
+            android:layout_marginTop="-15dp"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:text="Use current location?  "
+                android:textColor="#00705D"
+                android:textSize="18dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10pt"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:textColor="#000000"
+                android:id="@+id/rbLYes"
+                android:layout_marginTop="15pt"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:checked="true"
+                android:textColor="#000000"
+                android:id="@+id/rbLNo"
+                android:layout_marginTop="15pt"/>
+        </RadioGroup>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/btExpertNext"
+            android:text="Next"
+            android:textSize="22dp"
+            android:textColor="#FDFDFD"
+            android:background="#41AFA4"
+            android:layout_below="@+id/rbLocationExpert"/>
+    </RelativeLayout>
+</RelativeLayout>
+
+

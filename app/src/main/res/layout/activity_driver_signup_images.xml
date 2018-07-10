@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Use DrawerLayout as root container for activity -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+    <FrameLayout
+        android:id="@+id/content1_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/side_nav_bar"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar" >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/myEditText"
+                android:textSize="22dp"
+                android:text="Upload your papers scanned"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="20dp"/>
+        </android.support.v7.widget.Toolbar>
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageButton
+            android:layout_marginTop="90dp"
+            android:layout_width="130dp"
+            android:layout_height="140dp"
+            android:src="@drawable/addimage"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btDriver"
+           />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:text="Profile Image"
+            android:layout_below="@+id/btDriver"/>
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/btDriver"
+            android:src="@drawable/addimage"
+            android:id="@+id/btInsurance"
+            android:contentDescription=""/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scanned insurance"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/btInsurance"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btInsurance"
+            android:layout_marginTop="55dp"
+            android:text="Submit"
+            android:background="#41AFA4"
+            android:textAllCaps="false"
+            android:id="@+id/btSubmitImages"/>
+        <ProgressBar
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/progressBar"
+            android:visibility="invisible"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
