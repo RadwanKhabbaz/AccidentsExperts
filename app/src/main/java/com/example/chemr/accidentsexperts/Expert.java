@@ -68,7 +68,7 @@ public class Expert extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONArray response) {
                         try{
-                            prog1.setVisibility( View.INVISIBLE );
+                            prog1.setVisibility( View.INVISIBLE );//progresspar
                             JSONObject jsonObject = response.getJSONObject( 0 );
                             FName = jsonObject.getString( "E_FName" );
                             MName = jsonObject.getString( "E_MName" );
